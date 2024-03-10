@@ -3,15 +3,20 @@ package org.example;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+     public static void main(String[] args) {
+        MainComponent contens = new Contens("Содержание",1);
+        MainComponent monday = new Contens(" 1. Понедельник", 2);
+        MainComponent tuesday = new Contens(" 2.Вторник", 7);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        contens.add(monday);
+        contens.add(tuesday);
+
+        System.out.println("\"Ангел для сестры\" Джоди Пиколт, 2020");
+
+        Book book = new Book(contens);
+
+        book.printContents();
+
+    }
     }
 }

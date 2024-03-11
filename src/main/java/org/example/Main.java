@@ -15,6 +15,7 @@ public class Main {
 
         Book book = new Book(contens);
 
+        //У Вас тут будет UnsupportedOperationException, т.к. в классе Contens Вы не переопределили метод print из интерфейса MainComponent  
         book.printContents();
 
     }
